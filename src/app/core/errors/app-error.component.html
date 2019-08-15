@@ -1,0 +1,11 @@
+<div [ngSwitch]="error">
+  <div *ngSwitchCase="'400'"><app-error-400></app-error-400></div>
+  <div *ngSwitchCase="'401'"><app-error-401></app-error-401></div>
+  <div *ngSwitchCase="'403'"><app-error-403></app-error-403></div>
+  <div *ngSwitchCase="'404'"><app-error-404></app-error-404></div>
+  <div *ngSwitchCase="'500'"><app-error-500></app-error-500></div>
+  <div *ngSwitchDefault>
+    <app-error-indeterminate></app-error-indeterminate>
+  </div>
+</div>
+>
