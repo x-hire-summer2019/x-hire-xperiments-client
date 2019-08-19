@@ -14,13 +14,21 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { HeaderComponent, FooterComponent } from "./shared/index";
 import { LandingComponent } from "./landing/index";
+import {
+  HomeComponent,
+  RequestPodComponent,
+  SinglePodComponent
+} from "./home/index";
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    LandingComponent
+    LandingComponent,
+    HomeComponent,
+    RequestPodComponent,
+    SinglePodComponent
   ],
   imports: [
     BrowserModule,

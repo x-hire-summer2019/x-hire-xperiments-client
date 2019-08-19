@@ -5,5 +5,5 @@ import { Component, OnInit } from "@angular/core";
   templateUrl: "./app-landing.component.html"
 })
 export class LandingComponent  {
-
+  title = "super cool title"
 }
