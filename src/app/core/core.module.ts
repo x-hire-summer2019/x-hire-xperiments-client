@@ -13,24 +13,17 @@ import { HTTP_INTERCEPTORS } from "@angular/common/http";
 import { EnvironmentConfig } from "./environment-config";
 
 /* Service imports */
-import {
-  AuthService,
-  AuthGuard
-} from "./services/index";
+import { AuthService, AuthGuard, PodsService } from "./services/index";
 
 /* Module imports */
-import {AppErrorModule} from "./errors/app-error.module";
+import { AppErrorModule } from "./errors/app-error.module";
 
 /* Interceptor imports */
-
 
 @NgModule({
   declarations: [],
   imports: [CommonModule, AppErrorModule],
-  providers: [
-    AuthService,
-    AuthGuard
-  ]
+  providers: [AuthService, AuthGuard, PodsService]
 })
 export class CoreModule {
   // Prevent core module from being injected multiple times

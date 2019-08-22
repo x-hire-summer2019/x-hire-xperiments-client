@@ -46,4 +46,4 @@ export class AuthService {
   logoutUser() {
     this.currentUser = undefined;
   } // end of logoutUser
-}
+} // end class

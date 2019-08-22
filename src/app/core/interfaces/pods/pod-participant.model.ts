@@ -1,15 +1,13 @@
 /**
- * Used for auth user and current authenticated user.
+ * Used for information for users within pods.
  *
  * @field id: number
- * @field email: string
  * @field firstName: string
  * @field lastName: string
  *
  */
-export interface IUser {
+export interface IPodParticipant {
   id: number;
-  email: string;
   firstName: string;
   lastName: string;
 } // end interface
