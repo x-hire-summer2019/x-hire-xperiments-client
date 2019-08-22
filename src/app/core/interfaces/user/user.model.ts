@@ -5,6 +5,7 @@
  * @field email: string
  * @field firstName: string
  * @field lastName: string
+ * @field role: string
  *
  */
 export interface IUser {
@@ -12,4 +13,5 @@ export interface IUser {
   email: string;
   firstName: string;
   lastName: string;
+  role: string;
 } // end interface

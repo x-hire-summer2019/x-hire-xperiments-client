@@ -20,4 +20,11 @@ export class SinglePodComponent implements OnInit {
   ngOnInit() {
     this.pod = this.podsService.singlePod;
   } // end of ngOnInit
+
+  /**
+   * Handles the join pod form submission
+   */
+  onHandleJoinPod = (): void => {
+    this.podsService.JoinSinglePod(this.pod.id);
+  }; // end of onHandleJoinPod
 } // end of class
