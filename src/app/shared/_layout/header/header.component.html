@@ -1,3 +1,25 @@
 <header>
-  Header here
+  <mat-toolbar class="header">
+    <mat-nav-list>
+      <button class="toolbar__icon-button" mat-icon-button>
+        <mat-icon>menu</mat-icon>
+      </button>
+    </mat-nav-list>
+
+    <button mat-button  [routerLink]="['/']">
+      Brand Here
+    </button>
+
+    <button mat-button [routerLink]="['/home']">
+      Home
+    </button>
+
+    <button mat-button [routerLink]="['/request-pod']">
+      Request Pod
+    </button>
+
+    <button mat-button [routerLink]="['/single-pod/1']">
+      Single Pod
+    </button>
+  </mat-toolbar>
 </header>

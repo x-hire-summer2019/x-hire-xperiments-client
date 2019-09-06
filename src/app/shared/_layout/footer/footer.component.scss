@@ -1,7 +1,14 @@
-footer {
-
+.footer {
+  height: 75px;
+  background-color: black;
+  position: fixed;
+  bottom: 0;
+  color: white;
 }
 
+.footer__content{
+  margin: 0 auto;
+}
 
 @media screen and (min-width: 500px) {
 }

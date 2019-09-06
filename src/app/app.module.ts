@@ -9,6 +9,7 @@ import { ENVIRONMENT } from "../environments/environment";
 /* Module imports */
 import { CoreModule } from "./core/core.module";
 import { AppRoutingModule } from "./app-routing.module";
+import { MaterialModule } from "./shared/material.module";
 
 /* Component imports */
 import { AppComponent } from "./app.component";
@@ -32,6 +33,7 @@ import {
   ],
   imports: [
     BrowserModule,
+    MaterialModule,
     CoreModule.forRoot({
       environmentName: ENVIRONMENT.environmentName,
       apiTokenUrl: "",
