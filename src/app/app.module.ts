@@ -3,6 +3,9 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { LayoutModule } from "@angular/cdk/layout";
+import { MatSelectModule } from "@angular/material";
 
 /* Environment imports */
 import { ENVIRONMENT } from "../environments/environment";
@@ -34,6 +37,9 @@ import {
   imports: [
     BrowserModule,
     MaterialModule,
+    LayoutModule,
+    MatSelectModule,
+    BrowserAnimationsModule,
     CoreModule.forRoot({
       environmentName: ENVIRONMENT.environmentName,
       apiTokenUrl: "",

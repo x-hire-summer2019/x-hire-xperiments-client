@@ -15,6 +15,9 @@ export class RequestPodComponent {
    * Handles the request pod form request
    */
   onHandleRequest = (): void => {
-    this.podsService.PostRequestPod();
+    // temp data form data
+    const input = new FormData();
+
+    this.podsService.PostRequestPod(input);
   }; // end of onHandleRequest
 } // end of class

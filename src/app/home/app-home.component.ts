@@ -12,15 +12,11 @@ import { IPod } from "../core/interfaces/pods/pod.model";
   templateUrl: "./app-home.component.html"
 })
 export class HomeComponent implements OnInit {
-  // temp holder arr
-  allPods: IPod[];
 
   constructor(private podsService: PodsService) {} // end of constructor
   ngOnInit() {
     // make better logic here
     this.podsService.GetAllPods();
-
-    this.allPods = this.podsService.allPods;
   } // end of ngOnInit
 
   /**

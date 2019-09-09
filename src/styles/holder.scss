@@ -1,0 +1,31 @@
+@import url("./variables.scss");
+
+.holder {
+  display: flex;
+}
+
+.holder--dis-col{
+  flex-direction: column;
+}
+
+.holder--full-center{
+  align-items: center;
+  justify-content: center;
+}
+
+
+.holder--h-80{
+  height: 80vh;
+}
+
+@media screen and (min-width: 500px) {
+}
+
+@media screen and (min-width: 800px) {
+}
+
+@media screen and (min-width: 1100px) {
+}
+
+@media screen and (min-width: 1500px) {
+}

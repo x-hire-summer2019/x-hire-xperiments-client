@@ -7,8 +7,6 @@ export const ENVIRONMENT = {
   environmentName: "Dev",
   baseUrl: "",
   apiUrl: "",
-  bpiElementUrl: "",
-  api1Url: "",
   errorPageUrl: "",
   apiTokenUrl: "",
   clientVersion: "0.0.1"

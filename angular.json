@@ -25,6 +25,7 @@
             "styles": [
               "src/styles/reset.scss",
               "src/styles/global.scss",
+              "src/styles/holder.scss",
               "src/styles/body.scss",
               "src/styles/button.scss",
               "src/styles/image.scss",
@@ -91,6 +92,7 @@
             "styles": [
               "src/styles/reset.scss",
               "src/styles/global.scss",
+              "src/styles/holder.scss",
               "src/styles/body.scss",
               "src/styles/button.scss",
               "src/styles/image.scss",

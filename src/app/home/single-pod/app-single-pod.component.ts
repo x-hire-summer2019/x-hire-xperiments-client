@@ -12,19 +12,17 @@ import { IPod } from "../../core/interfaces/pods/pod.model";
   templateUrl: "./app-single-pod.component.html"
 })
 export class SinglePodComponent implements OnInit {
-  // temp holder obj
-  pod: IPod;
-
   constructor(private podsService: PodsService) {} // end of constructor
 
-  ngOnInit() {
-    this.pod = this.podsService.singlePod;
-  } // end of ngOnInit
+  ngOnInit() {} // end of ngOnInit
 
   /**
    * Handles the join pod form submission
    */
   onHandleJoinPod = (): void => {
-    this.podsService.JoinSinglePod(this.pod.id);
+    // temp data form
+    const input = new FormData();
+
+    this.podsService.JoinSinglePod(this.podsService.singlePod.id, input);
   }; // end of onHandleJoinPod
 } // end of class

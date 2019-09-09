@@ -13,8 +13,8 @@ import { catchError } from "rxjs/operators";
 import { IPod } from "../../interfaces//pods/pod.model";
 import { IPodParticipant } from "../../interfaces/pods/pod-participant.model";
 
-/* temp import of data items */
-import AllPods from "../../../../temp/pods/all-pods.js";
+/* Environment imports */
+import { ENVIRONMENT } from "../../../../environments/environment";
 
 @Injectable()
 export class PodsService {
@@ -29,34 +29,50 @@ export class PodsService {
    * Gets all the pods
    */
   GetAllPods = (): void => {
-    this.allPods = AllPods();
+    this.http.get(`${ENVIRONMENT.apiUrl}/api/all-pods`).subscribe(data => {
+      console.log(data);
+    });
   }; // end GetAllPods
 
   /**
    * Sets the single pod
+   * @param id  number - id of pod to get
    */
   SetSinglePod = (id: number): void => {
-    this.singlePod = AllPods().filter(pod => pod.id === id);
+    this.http
+      .get(`${ENVIRONMENT.apiUrl}/api/single-pod/${id}`)
+      .subscribe(data => {
+        console.log(data);
+      });
   }; // end GetSinglePod
 
   /**
    * Makes a pod request
+   * @param data - post data
    */
-  PostRequestPod = (): void => {
-    console.log("Pod request sent!");
+  PostRequestPod = (data): void => {
+    this.http.post(`${ENVIRONMENT.apiUrl}/api/request-pod`, data).subscribe();
   }; // end PostRequestPod
 
   /**
    * Edits a single pod
+   * @param id number - id of pod to edit
+   * @param data - information to edit pod with
    */
-  PutSinglePod = (id: number): void => {
-    console.log("Updates single pod");
+  PutSinglePod = (id: number, data): void => {
+    this.http
+      .put(`${ENVIRONMENT.apiUrl}/api/single-pod/${id}`, data)
+      .subscribe();
   }; // end PutSinglePod
 
   /**
    * Joins a single pod
+   * @param id number - id of pod to join
+   * @param data - information to post
    */
-  JoinSinglePod = (id: number): void => {
-    console.log("Joins single pod");
+  JoinSinglePod = (id: number, data): void => {
+    this.http
+      .post(`${ENVIRONMENT.apiUrl}/api/join-pod/${id}`, data)
+      .subscribe();
   }; // end PutSinglePod
 } // end class
