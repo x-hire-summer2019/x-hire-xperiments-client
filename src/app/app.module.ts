@@ -21,7 +21,8 @@ import { LandingComponent } from "./landing/index";
 import {
   HomeComponent,
   RequestPodComponent,
-  SinglePodComponent
+  SinglePodComponent,
+  PodModalComponent
 } from "./home/index";
 
 @NgModule({
@@ -32,7 +33,8 @@ import {
     LandingComponent,
     HomeComponent,
     RequestPodComponent,
-    SinglePodComponent
+    SinglePodComponent,
+    PodModalComponent
   ],
   imports: [
     BrowserModule,
@@ -51,6 +53,7 @@ import {
     HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [PodModalComponent]
 })
 export class AppModule {}

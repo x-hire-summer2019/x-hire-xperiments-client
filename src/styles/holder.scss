@@ -4,18 +4,28 @@
   display: flex;
 }
 
-.holder--dis-col{
+.holder--dis-col {
   flex-direction: column;
 }
 
-.holder--full-center{
+.holder--full-center {
   align-items: center;
   justify-content: center;
 }
 
+.holder--m-center {
+  margin: 0 auto;
+}
 
-.holder--h-80{
+.holder--w-full {
+  width: 100%;
+}
+.holder--h-80 {
   height: 80vh;
+}
+
+.holder--m-t-20 {
+  margin-top: 20px;
 }
 
 @media screen and (min-width: 500px) {
