@@ -1,7 +1,7 @@
 /* Angular imports */
 import { Component } from "@angular/core";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
-
+import { Title } from "@angular/platform-browser";
 /* Service imports */
 import { PodsService } from "../../core/services/pods/pods.service";
 
@@ -15,7 +15,9 @@ export class RequestPodComponent {
     description: new FormControl("", [Validators.required])
   });
 
-  constructor(private podsService: PodsService) {} // end of constructor
+  constructor(private podsService: PodsService,   private titleService: Title) {
+    this.titleService.setTitle("X-hire Digital Pods - Request Pod");
+  } // end of constructor
   /**
    * convenience getter for easy access to form fields
    */

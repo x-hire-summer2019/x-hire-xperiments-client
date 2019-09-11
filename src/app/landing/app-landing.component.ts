@@ -21,7 +21,7 @@ export class LandingComponent {
     private router: Router,
     private titleService: Title
   ) {
-    this.titleService.setTitle("SUPER COOL TITLE!!!");
+    this.titleService.setTitle("X-hire Digital Pods - Log in");
   }
 
   /**

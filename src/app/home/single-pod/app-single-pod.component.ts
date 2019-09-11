@@ -1,6 +1,6 @@
 /* Angular imports */
 import { Component, OnInit } from "@angular/core";
-
+import { Title } from "@angular/platform-browser";
 /* Service imports */
 import { PodsService } from "../../core/services/pods/pods.service";
 
@@ -12,7 +12,9 @@ import { IPod } from "../../core/interfaces/pods/pod.model";
   templateUrl: "./app-single-pod.component.html"
 })
 export class SinglePodComponent implements OnInit {
-  constructor(private podsService: PodsService) {} // end of constructor
+  constructor(private podsService: PodsService, private titleService: Title) {
+    this.titleService.setTitle("X-hire Digital Pods - Single Pod");
+  } // end of constructor
 
   ngOnInit() {} // end of ngOnInit
 

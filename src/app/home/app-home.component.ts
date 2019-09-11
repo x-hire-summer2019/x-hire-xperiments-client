@@ -5,7 +5,7 @@ import {
   MatDialogRef,
   MAT_DIALOG_DATA
 } from "@angular/material/dialog";
-
+import { Title } from "@angular/platform-browser";
 /* Service imports */
 import { PodsService } from "../core/services/pods/pods.service";
 import { ModalSizeService } from "../core/services/modals/modal-size.service";
@@ -25,8 +25,11 @@ export class HomeComponent implements OnInit {
   constructor(
     private podsService: PodsService,
     public dialog: MatDialog,
-    private modalSize: ModalSizeService
-  ) {} // end of constructor
+    private modalSize: ModalSizeService,
+    private titleService: Title
+  ) {
+    this.titleService.setTitle("X-hire Digital Pods - Home");
+  } // end of constructor
   ngOnInit() {
     // make better logic here
     this.podsService.GetAllPods();
