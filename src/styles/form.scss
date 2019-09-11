@@ -1,15 +1,7 @@
 @import url("./variables.scss");
 
-.button {
-  background: var(--color-two);
-}
-.button:hover {
-  box-shadow: 0 2px 4px 0.5px var(--color-two);
-}
-
-.button--col-m button {
-  margin: 5px;
-  width: 300px
+.form {
+  width: 500px;
 }
 
 @media screen and (min-width: 500px) {

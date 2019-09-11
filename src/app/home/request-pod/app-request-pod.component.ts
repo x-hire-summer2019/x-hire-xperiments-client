@@ -1,5 +1,6 @@
 /* Angular imports */
 import { Component } from "@angular/core";
+import { FormGroup, FormControl, Validators } from "@angular/forms";
 
 /* Service imports */
 import { PodsService } from "../../core/services/pods/pods.service";
@@ -9,7 +10,18 @@ import { PodsService } from "../../core/services/pods/pods.service";
   templateUrl: "./app-request-pod.component.html"
 })
 export class RequestPodComponent {
+  requestPod = new FormGroup({
+    name: new FormControl("", [Validators.required]),
+    description: new FormControl("", [Validators.required])
+  });
+
   constructor(private podsService: PodsService) {} // end of constructor
+  /**
+   * convenience getter for easy access to form fields
+   */
+  get f() {
+    return this.requestPod.controls;
+  } // end f getter
 
   /**
    * Handles the request pod form request
