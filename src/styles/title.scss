@@ -5,6 +5,11 @@
   font-size: 2rem;
 }
 
+.title2 {
+  color: var(--title-color);
+  font-size: 1.6rem;
+}
+
 .title--small-caps {
   font-variant: small-caps;
 }
@@ -16,6 +21,15 @@
 .title--m-t-b-20 {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.title--medium {
+  font-size: 1.9rem;
+}
+
+.title--m-s-40{
+  margin-right: 40px;
+  margin-left: 40px;
 }
 
 @media screen and (min-width: 500px) {
