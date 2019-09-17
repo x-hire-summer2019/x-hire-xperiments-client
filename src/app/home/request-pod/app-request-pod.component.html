@@ -1,7 +1,9 @@
 <h2 class="title title--center title--m-t-b-20">
-  Do you have a great idea for a new POD concept? <br />If so please fill out
-  the following form and our POD Masters will be in touch with you shortly.
+  Do you have a great idea for a new POD concept? <br />
 </h2>
+<h3 class="title2 title--center ">
+  If so please fill out the following form and our POD Masters will be in touch with you shortly.
+</h3>
 
 <form
   class="holder holder--dis-col holder full-center form holder--m-center"
@@ -23,6 +25,34 @@
       Name is required
     </div>
   </div>
+
+  <mat-form-field>
+    <textarea
+      matInput
+      placeholder="Technology Name"
+      formControlName="Technology Name"
+      maxlength="2000"
+    ></textarea>
+  </mat-form-field>
+
+  <mat-form-field>
+    <textarea
+      matInput
+      placeholder="Tool Name"
+      formControlName="Tool Name"
+      maxlength="2000"
+    ></textarea>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Is there a possible certificate associated with this tech?</mat-label>
+    <mat-select>
+      <mat-option>--None--</mat-option>
+      <mat-option value="Yes">Yes</mat-option>
+      <mat-option value="No">No</mat-option>
+      <mat-option value="Unknown">Unknown</mat-option>
+    </mat-select>
+  </mat-form-field>
 
   <mat-form-field>
     <textarea
