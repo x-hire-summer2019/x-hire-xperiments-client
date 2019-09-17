@@ -12,6 +12,13 @@
       </mat-nav-list>
 
       <img
+        *ngIf="auth.isAuthenticated()"
+        src="assets/Xpanxion-Logo-White.png"
+        class="image brand"
+        [routerLink]="['/home']"
+      />
+      <img
+        *ngIf="!auth.isAuthenticated()"
         src="assets/Xpanxion-Logo-White.png"
         class="image brand"
         [routerLink]="['/']"
@@ -20,24 +27,43 @@
   </header>
   <mat-drawer-container class="container" [hasBackdrop]="'false'">
     <mat-drawer #drawer [mode]="'side'" class="drawer">
-      <div class="holder holder--dis-col">
-        <button mat-button [routerLink]="['/home']">
-          Home
-        </button>
+      <div *ngIf="auth.isAuthenticated()" class="holder holder--dis-col">
+        <div class="holder holder--dis-col">
+          <button mat-button [routerLink]="['/home']">
+            Home
+          </button>
 
-        <button mat-button [routerLink]="['/request-pod']">
-          Request Pod
-        </button>
+          <button mat-button [routerLink]="['/request-pod']">
+            Request Pod
+          </button>
 
-        <button mat-button [routerLink]="['/single-pod/1']">
-          Single Pod
-        </button>
+          <button mat-button (click)="onHandleLogout()">
+            Logout
+          </button>
+        </div>
+        <div class="holder holder--dis-col holder--m-t-50 holder--full-center">
+          <div class="clickable" [routerLink]="['/profile']">
+            <img
+              class="header__profile-image"
+              src="/assets/minion_image.png"
+              alt="User profile image"
+            />
+            <h4 class="title--center">
+              Welcome {{ auth.currentUser?.firstName }}!
+            </h4>
+          </div>
+        </div>
       </div>
+      <ng-container *ngIf="!auth.isAuthenticated()">
+        <div class="holder holder--dis-col">
+          <button mat-button [routerLink]="['/']">
+            Login
+          </button>
+        </div>
+      </ng-container>
     </mat-drawer>
-    <mat-drawer-content>
-      <div>
-        <router-outlet></router-outlet>
-      </div>
+    <mat-drawer-content class="content">
+      <router-outlet></router-outlet>
       <app-footer></app-footer>
     </mat-drawer-content>
   </mat-drawer-container>

@@ -12,6 +12,8 @@ import { PodsService } from "../../core/services/pods/pods.service";
 export class RequestPodComponent {
   requestPod = new FormGroup({
     name: new FormControl("", [Validators.required]),
+    technologyName: new FormControl("", [Validators.required]),
+    toolName: new FormControl("", [Validators.required]),
     description: new FormControl("", [Validators.required])
   });
 

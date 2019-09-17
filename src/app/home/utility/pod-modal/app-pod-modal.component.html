@@ -4,8 +4,12 @@
 <div class="holder holder--m-t-20 holder--w-full">
   <mat-divider></mat-divider>
   <div class=" holder holder--dis-col holder--m-center button--col-m">
-
-    <button mat-raised-button color="primary">
+    <button
+      mat-raised-button
+      [routerLink]="['single-pod/1']"
+      (click)="onHandleClosePod()"
+      color="primary"
+    >
       More Information
     </button>
   </div>
@@ -14,3 +18,4 @@
       Join
     </button>
   </div>
+</div>

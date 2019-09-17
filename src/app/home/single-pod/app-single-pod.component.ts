@@ -3,7 +3,7 @@ import { Component, OnInit } from "@angular/core";
 import { Title } from "@angular/platform-browser";
 /* Service imports */
 import { PodsService } from "../../core/services/pods/pods.service";
-
+import { ModalService } from "../../core/services/modals/modal.service";
 /* interface imports */
 import { IPod } from "../../core/interfaces/pods/pod.model";
 
@@ -12,7 +12,11 @@ import { IPod } from "../../core/interfaces/pods/pod.model";
   templateUrl: "./app-single-pod.component.html"
 })
 export class SinglePodComponent implements OnInit {
-  constructor(private podsService: PodsService, private titleService: Title) {
+  constructor(
+    private podsService: PodsService,
+    private titleService: Title,
+    private modalRef: ModalService
+  ) {
     this.titleService.setTitle("X-hire Digital Pods - Single Pod");
   } // end of constructor
 
@@ -26,5 +30,7 @@ export class SinglePodComponent implements OnInit {
     const input = new FormData();
 
     this.podsService.JoinSinglePod(this.podsService.singlePod.id, input);
+    this.modalRef.dialog.close();
   }; // end of onHandleJoinPod
+
 } // end of class

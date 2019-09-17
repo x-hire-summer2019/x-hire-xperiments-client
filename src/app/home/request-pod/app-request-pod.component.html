@@ -2,7 +2,8 @@
   Do you have a great idea for a new POD concept? <br />
 </h2>
 <h3 class="title2 title--center ">
-  If so please fill out the following form and our POD Masters will be in touch with you shortly.
+  If so please fill out the following form and our POD Masters will be in touch
+  with you shortly.
 </h3>
 
 <form
@@ -13,7 +14,7 @@
   <mat-form-field>
     <input
       matInput
-      placeholder="name"
+      placeholder="Name"
       formControlName="name"
       maxlength="100"
       required
@@ -27,25 +28,46 @@
   </div>
 
   <mat-form-field>
-    <textarea
+    <input
       matInput
       placeholder="Technology Name"
-      formControlName="Technology Name"
-      maxlength="2000"
-    ></textarea>
+      formControlName="technologyName"
+      maxlength="150"
+      required
+      autocomplete="false"
+    />
   </mat-form-field>
+  <div
+    *ngIf="
+      f.technologyName.invalid &&
+      (f.technologyName.dirty || f.technologyName.touched)
+    "
+  >
+    <div *ngIf="f.technologyName.errors.required" class="error-message">
+      Technology Name is required
+    </div>
+  </div>
 
   <mat-form-field>
-    <textarea
+    <input
       matInput
       placeholder="Tool Name"
-      formControlName="Tool Name"
-      maxlength="2000"
-    ></textarea>
+      formControlName="toolName"
+      maxlength="150"
+      required
+      autocomplete="false"
+    />
   </mat-form-field>
+  <div *ngIf="f.toolName.invalid && (f.toolName.dirty || f.toolName.touched)">
+    <div *ngIf="f.toolName.errors.required" class="error-message">
+      Tool Name is required
+    </div>
+  </div>
 
   <mat-form-field>
-    <mat-label>Is there a possible certificate associated with this tech?</mat-label>
+    <mat-label
+      >Is there a possible certificate associated with this tech?</mat-label
+    >
     <mat-select>
       <mat-option>--None--</mat-option>
       <mat-option value="Yes">Yes</mat-option>
@@ -57,11 +79,22 @@
   <mat-form-field>
     <textarea
       matInput
-      placeholder="Description"
+      placeholder="What problem does this solve?"
       formControlName="description"
       maxlength="2000"
+      required
+      autocomplete="false"
     ></textarea>
   </mat-form-field>
+  <div
+    *ngIf="
+      f.description.invalid && (f.description.dirty || f.description.touched)
+    "
+  >
+    <div *ngIf="f.description.errors.required" class="error-message">
+      Problem description is required
+    </div>
+  </div>
 
   <button
     mat-raised-button

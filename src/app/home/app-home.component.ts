@@ -10,6 +10,7 @@ import { Title } from "@angular/platform-browser";
 import { PodsService } from "../core/services/pods/pods.service";
 import { ModalSizeService } from "../core/services/modals/modal-size.service";
 import { ModalService } from "../core/services/modals/modal.service";
+import { AuthService } from "../core/services/auth/auth.service";
 
 /* Component imports */
 import { PodModalComponent } from "./utility/index";
@@ -26,13 +27,16 @@ export class HomeComponent implements OnInit {
     private podsService: PodsService,
     public dialog: MatDialog,
     private modalSize: ModalSizeService,
-    private titleService: Title
+    private modalRef: ModalService,
+    private titleService: Title,
+    private auth: AuthService
   ) {
     this.titleService.setTitle("X-hire Digital Pods - Home");
   } // end of constructor
   ngOnInit() {
     // make better logic here
     this.podsService.GetAllPods();
+    console.log(this.auth.isAuthenticated());
   } // end of ngOnInit
 
   /**
@@ -51,5 +55,7 @@ export class HomeComponent implements OnInit {
       PodModalComponent,
       this.modalSize.getMediumDialog()
     );
+
+    this.modalRef.dialog = dialogRef;
   } // end of onHandleOpenModal
 } // end of class

@@ -18,6 +18,18 @@
   min-height: 100vh;
 }
 
+.content{
+  min-height: 100vh;
+}
+
+.header__profile-image {
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
 @media screen and (min-width: 500px) {
 }
 

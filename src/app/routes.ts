@@ -9,14 +9,31 @@ import {
   SinglePodComponent
 } from "./home/index";
 
+import { ContributorsComponent } from "./extras/index";
+import { UserProfileComponent } from "./user/index";
+
 /* Guard imports */
 import { AuthGuard } from "./core/services/guards/index";
 
 export const APPROUTES: Routes = [
   { path: "error/:error", component: ErrorComponent },
   { path: "", component: LandingComponent, pathMatch: "full" },
-  { path: "home", component: HomeComponent },
-  { path: "request-pod", component: RequestPodComponent },
-  { path: "single-pod/:id", component: SinglePodComponent },
+  { path: "contributors", component: ContributorsComponent },
+  {
+    path: "profile",
+    canActivate: [AuthGuard],
+    component: UserProfileComponent
+  },
+  { path: "home", canActivate: [AuthGuard], component: HomeComponent },
+  {
+    path: "request-pod",
+    canActivate: [AuthGuard],
+    component: RequestPodComponent
+  },
+  {
+    path: "single-pod/:id",
+    canActivate: [AuthGuard],
+    component: SinglePodComponent
+  },
   { path: "**", redirectTo: "error/404" }
 ];

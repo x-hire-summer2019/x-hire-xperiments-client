@@ -41,6 +41,6 @@ export class LandingComponent {
       this.loginForm.value.password
     );
     // redirect to home
-    this.router.navigate(["/home"]);
+    // this.router.navigate(["/home"]);
   }; // end of onHandleUserLogin
 }

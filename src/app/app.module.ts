@@ -24,6 +24,8 @@ import {
   SinglePodComponent,
   PodModalComponent
 } from "./home/index";
+import { ContributorsComponent } from "./extras/index";
+import { UserProfileComponent } from "./user/index";
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import {
     HomeComponent,
     RequestPodComponent,
     SinglePodComponent,
-    PodModalComponent
+    PodModalComponent,
+    ContributorsComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
