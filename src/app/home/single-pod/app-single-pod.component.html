@@ -1,17 +1,36 @@
-<h2>
-  POD Name and custom Welcome maybe
-</h2>
-<div mat-tab-group>
+<div class="holder holder--dis-col holder--full-center">
+  <h2 class="title title--center title--m-t-b-20 title--m-s-40">
+    POD Name
+  </h2>
+  <div mat-tab-group>
+    <mat-tab-group>
+      <mat-tab label="Description">
+        <div class="holder holder__block holder--full-center">
+          <p>Some really neat description and stuff...</p>
+        </div>
+      </mat-tab>
+      <mat-tab label="Accomplishments">
+        <div class="holder holder__block holder--full-center">
+          <p>List of accomplishments and stuff...</p>
+        </div>
+      </mat-tab>
+      <mat-tab label="Members">
+        <div class="holder holder__block holder--full-center">
+          <p>List of pod members...</p>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
 
-  <mat-tab-group>
-    <mat-tab label="Description"> Content 1 </mat-tab>
-    <mat-tab label="Accomplishments"> Content 2 </mat-tab>
-    <mat-tab label="Members"> Content 3 </mat-tab>
-  </mat-tab-group>
-
-   <div class=" holder holder--dis-col holder--m-center  button--col-m">
-    <button mat-raised-button mat-dialog-close color="primary">
-      Join
-    </button>
+    <div class=" holder holder--dis-col holder--m-center">
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="onHandleJoinPod()"
+      >
+        Join
+      </button>
+    </div>
   </div>
 </div>
+
+

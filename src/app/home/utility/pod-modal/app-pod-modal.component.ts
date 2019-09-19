@@ -24,6 +24,29 @@ export class PodModalComponent implements OnInit {
    *
    */
   onHandleClosePod = (): void => {
+    alert("ARE YOU HAPPY DUSTIN???");
+    alert("THE X IS THERE DUSTIN!!");
+    alert("DID YOU SEE THE X DUSTIN??");
+    alert("It changes to red on hover!!");
+    alert(`“At the center of your being
+    you have the answer;
+    you know who you are
+    and you know what you want.”
+    ― Lao Tzu`);
+    alert("WHICH IS THIS X DUSTIN!");
     this.modalRef.dialog.close();
   }; // end of onHandleClosePod
+
+  /**
+   * Handles the join pod form submission
+   */
+  onHandleJoinPod = (): void => {
+    // temp data form
+    alert(
+      "Should be joining the pod, but everything has been commented out for now!"
+    );
+    // const input = new FormData();
+    // this.podsService.JoinSinglePod(this.podsService.singlePod.id, input);
+    this.modalRef.dialog.close();
+  }; // end of onHandleJoinPod
 } // end of class

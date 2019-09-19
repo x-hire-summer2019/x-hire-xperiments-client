@@ -27,10 +27,9 @@ export class SinglePodComponent implements OnInit {
    */
   onHandleJoinPod = (): void => {
     // temp data form
-    const input = new FormData();
-
-    this.podsService.JoinSinglePod(this.podsService.singlePod.id, input);
-    this.modalRef.dialog.close();
+    alert("Should be joining the pod, but everything has been commented out for now!");
+    // const input = new FormData();
+    // this.podsService.JoinSinglePod(this.podsService.singlePod.id, input);
   }; // end of onHandleJoinPod
 
 } // end of class

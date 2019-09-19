@@ -8,6 +8,10 @@
   flex-direction: column;
 }
 
+.holder--pos-rel{
+  position: relative;
+}
+
 .holder--full-center {
   align-items: center;
   justify-content: center;
@@ -33,6 +37,11 @@
 }
 .holder--m-b-100{
   margin-bottom: 100px;
+}
+
+.holder__block{
+  width: 500px;
+  min-height: 500px;
 }
 
 @media screen and (min-width: 500px) {

@@ -28,19 +28,6 @@
   <mat-drawer-container class="container" [hasBackdrop]="'false'">
     <mat-drawer #drawer [mode]="'side'" class="drawer">
       <div *ngIf="auth.isAuthenticated()" class="holder holder--dis-col">
-        <div class="holder holder--dis-col">
-          <button mat-button [routerLink]="['/home']">
-            Home
-          </button>
-
-          <button mat-button [routerLink]="['/request-pod']">
-            Request Pod
-          </button>
-
-          <button mat-button (click)="onHandleLogout()">
-            Logout
-          </button>
-        </div>
         <div class="holder holder--dis-col holder--m-t-50 holder--full-center">
           <div class="clickable" [routerLink]="['/profile']">
             <img
@@ -52,6 +39,19 @@
               Welcome {{ auth.currentUser?.firstName }}!
             </h4>
           </div>
+        </div>
+        <div class="holder holder--dis-col holder--m-t-50">
+          <button mat-button [routerLink]="['/home']">
+            Home
+          </button>
+
+          <button mat-button [routerLink]="['/request-pod']">
+            Request Pod
+          </button>
+
+          <button mat-button (click)="onHandleLogout()">
+            Logout
+          </button>
         </div>
       </div>
       <ng-container *ngIf="!auth.isAuthenticated()">

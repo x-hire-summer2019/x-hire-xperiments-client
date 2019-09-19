@@ -137,3 +137,28 @@ $my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
 .clickable{
   cursor: pointer;
 }
+
+.modal__close{
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.34s ease-in-out all;
+  padding: 3px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.modal__close:hover{
+  color: red;
+  border: 1px solid red;
+  transition: 0.34s ease-in-out all;
+}
+.modal__close:active{
+  color: white;
+  background-color: red;
+  border: 1px solid white;
+  transition: 0.34s ease-in-out all;
+}
+

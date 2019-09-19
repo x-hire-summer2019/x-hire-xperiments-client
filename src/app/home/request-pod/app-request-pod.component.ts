@@ -14,6 +14,7 @@ export class RequestPodComponent {
     name: new FormControl("", [Validators.required]),
     technologyName: new FormControl("", [Validators.required]),
     toolName: new FormControl("", [Validators.required]),
+    certification: new FormControl("", [Validators.required]),
     description: new FormControl("", [Validators.required])
   });
 
@@ -32,8 +33,9 @@ export class RequestPodComponent {
    */
   onHandleRequest = (): void => {
     // temp data form data
-    const input = new FormData();
-
-    this.podsService.PostRequestPod(input);
+    alert("Should be requesting, but not doing anything for now...");
+    // const input = new FormData();
+    // this.podsService.PostRequestPod(input);
+    this.requestPod.reset();
   }; // end of onHandleRequest
 } // end of class
