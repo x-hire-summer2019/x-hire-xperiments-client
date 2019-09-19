@@ -6,7 +6,7 @@ export const ENVIRONMENT = {
   production: false,
   environmentName: "Dev",
   baseUrl: "",
-  apiUrl: "",
+  apiUrl: "http://localhost:8090",
   errorPageUrl: "",
   apiTokenUrl: "",
   clientVersion: "0.0.1"
