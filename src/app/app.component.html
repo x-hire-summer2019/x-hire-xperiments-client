@@ -48,10 +48,11 @@
           <button mat-button [routerLink]="['/request-pod']">
             Request Pod
           </button>
-
-          <button mat-button (click)="onHandleLogout()">
-            Logout
-          </button>
+          <div class="holder holder--dis-col holder--m-t-50">
+            <button mat-button (click)="onHandleLogout()">
+              Logout
+            </button>
+          </div>
         </div>
       </div>
       <ng-container *ngIf="!auth.isAuthenticated()">
