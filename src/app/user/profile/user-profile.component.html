@@ -15,23 +15,58 @@
         <mat-card-subtitle>X-Hire</mat-card-subtitle>
       </mat-card>
     </div>
-    <div class=" holder holder--dis-col holder--m-center button--col-m">
+    <div
+      class=" holder holder--dis-col holder--m-center button--col-m holder--50"
+    >
       <div class="holder holder--dis-col holder--m-t-50">
         <h4 class="title2">Bio</h4>
-        <p>The pods this person is associated with.</p>
+        <p class="body body--line-double">
+          Tousled seitan edison bulb, affogato brunch migas kombucha. Messenger
+          bag chillwave hoodie, master cleanse fam direct trade wayfarers pork
+          belly chicharrones taiyaki selfies. Literally yuccie jianbing austin
+          locavore. Austin whatever salvia af cold-pressed, occupy health goth
+          stumptown iPhone blue bottle ennui umami.
+        </p>
+        <p class="body body--line-double">
+          Lorem ipsum dolor amet tote bag copper mug green juice +1 enamel pin
+          hoodie. Fixie lo-fi activated charcoal, hammock raclette quinoa
+          actually jianbing. Pork belly sriracha iPhone gastropub fixie
+          wayfarers asymmetrical vegan. Selfies freegan health goth kale chips
+          snackwave quinoa cloud bread bushwick bitters shabby chic semiotics
+          shaman gastropub vaporware enamel pin. Hexagon drinking vinegar
+          affogato kale chips, ethical four dollar toast direct trade viral
+          kinfolk hammock green juice four loko.
+        </p>
       </div>
+      <mat-divider></mat-divider>
       <div class="holder holder--dis-col holder--m-t-50">
         <h4 class="title2">Skills</h4>
-        <p>A description or something here.</p>
+        <mat-list>
+          <mat-list-item> Asymmetrical letterpress </mat-list-item>
+          <mat-list-item> Vegan single-origin coffee </mat-list-item>
+          <mat-list-item> kombucha occupy </mat-list-item>
+          <mat-list-item> cold-pressed </mat-list-item>
+        </mat-list>
       </div>
+      <mat-divider></mat-divider>
       <div class="holder holder--dis-col holder--m-t-50">
         <h4 class="title2">Interests</h4>
-        <p>Some interests here.</p>
+        <p class="body body--line-double">
+          Some interests here, Some interests here, Some interests here, Some
+          interests here, Some interests here, Some interests here, Some
+          interests here, Some interests here, Some interests here.
+        </p>
       </div>
+      <mat-divider></mat-divider>
       <div class="holder holder--dis-col holder--m-t-50">
         <h4 class="title2">PODs Joined</h4>
-        <p>Skills this person has.</p>
+        <mat-list>
+          <mat-list-item [routerLink]="['/single-pod/1']" class="clickable"
+            >Single POD</mat-list-item
+          >
+        </mat-list>
       </div>
+      <mat-divider></mat-divider>
     </div>
   </div>
   <div class="holder holder--dis-col holder--m-t-50 holder--m-b-100">

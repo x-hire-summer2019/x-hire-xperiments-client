@@ -50,6 +50,7 @@ export class AuthService {
    */
   logoutUser() {
     this.currentUser = undefined;
+    this.redirectUrl = undefined;
     this.router.navigate(["/"]);
   } // end of logoutUser
 } // end class
