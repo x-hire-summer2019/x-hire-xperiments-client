@@ -24,7 +24,7 @@ export class PodModalComponent implements OnInit {
    *
    */
   onHandleClosePod = (): void => {
-    alert("ARE YOU HAPPY DUSTIN???");
+    /*alert("ARE YOU HAPPY DUSTIN???");
     alert("THE X IS THERE DUSTIN!!");
     alert("DID YOU SEE THE X DUSTIN??");
     alert("It changes to red on hover!!");
@@ -33,7 +33,7 @@ export class PodModalComponent implements OnInit {
     you know who you are
     and you know what you want.”
     ― Lao Tzu`);
-    alert("WHICH IS THIS X DUSTIN!");
+    alert("WHICH IS THIS X DUSTIN!");*/
     this.modalRef.dialog.close();
   }; // end of onHandleClosePod
 
