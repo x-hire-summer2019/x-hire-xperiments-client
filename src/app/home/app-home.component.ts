@@ -36,7 +36,6 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     // make better logic here
     this.podsService.GetAllPods();
-    console.log(this.auth.isAuthenticated());
   } // end of ngOnInit
 
   /**
@@ -50,7 +49,7 @@ export class HomeComponent implements OnInit {
   /**
    * Opens the modal
    */
-  onHandleOpenModal(pod) {
+  onHandleOpenModal(pod: IPod) {
     this.podsService.singlePod = pod;
 
     const dialogRef = this.dialog.open(
