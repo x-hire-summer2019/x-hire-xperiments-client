@@ -50,7 +50,9 @@ export class HomeComponent implements OnInit {
   /**
    * Opens the modal
    */
-  onHandleOpenModal() {
+  onHandleOpenModal(pod) {
+    this.podsService.singlePod = pod;
+
     const dialogRef = this.dialog.open(
       PodModalComponent,
       this.modalSize.getMediumDialog()

@@ -13,11 +13,13 @@ import { IPod } from "../../core/interfaces/pods/pod.model";
 })
 export class SinglePodComponent implements OnInit {
   constructor(
-    private podsService: PodsService,
+    public podsService: PodsService,
     private titleService: Title,
     private modalRef: ModalService
   ) {
-    this.titleService.setTitle("X-hire Digital Pods - Single Pod");
+    this.titleService.setTitle(
+      `X-hire Digital Pods - ${this.podsService.singlePod.podName}`
+    );
   } // end of constructor
 
   ngOnInit() {} // end of ngOnInit
@@ -27,9 +29,10 @@ export class SinglePodComponent implements OnInit {
    */
   onHandleJoinPod = (): void => {
     // temp data form
-    alert("Should be joining the pod, but everything has been commented out for now!");
+    alert(
+      "Should be joining the pod, but everything has been commented out for now!"
+    );
     // const input = new FormData();
     // this.podsService.JoinSinglePod(this.podsService.singlePod.id, input);
   }; // end of onHandleJoinPod
-
 } // end of class

@@ -31,7 +31,7 @@ export const APPROUTES: Routes = [
     component: RequestPodComponent
   },
   {
-    path: "single-pod/:id",
+    path: "single-pod",
     canActivate: [AuthGuard],
     component: SinglePodComponent
   },

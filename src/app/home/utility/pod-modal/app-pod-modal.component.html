@@ -2,17 +2,11 @@
   <div class="modal__close" (click)="onHandleClosePod()">X</div>
 
   <div class="holder holder--dis-col">
-    <h2 class="title title--center">Pod Title</h2>
+    <h2 class="title title--center">{{ podsService.singlePod.podName }}</h2>
     <div class="holder">
       <div class="holder holder--dis-col holder--m-center holder--50">
         <p class="body body--m-top-20 body--line-double">
-          Hella af pour-over biodiesel chia williamsburg flexitarian
-          asymmetrical before they sold out enamel pin whatever pop-up pabst
-          four dollar toast meditation. Copper mug cred fashion axe portland,
-          pop-up vape before they sold out jean shorts af offal meditation
-          vexillologist. Lyft squid activated charcoal blog. Sriracha lyft swag
-          deep v wolf jianbing kickstarter direct trade cliche normcore woke
-          drinking vinegar ethical. Vexillologist franzen venmo umami.
+          {{ podsService.singlePod.description }}
         </p>
       </div>
     </div>
@@ -23,7 +17,7 @@
       <button
         mat-raised-button
         mat-dialog-close
-        [routerLink]="['single-pod/1']"
+        [routerLink]="['single-pod']"
         color="primary"
       >
         More Information

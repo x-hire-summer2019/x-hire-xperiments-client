@@ -31,7 +31,7 @@
       <ng-container *ngFor="let pod of podsService.allPods">
         <ng-container *ngIf="pod.podType === 'businessAssurance'">
           <button
-            (click)="onHandleOpenModal()"
+            (click)="onHandleOpenModal(pod)"
             mat-raised-button
             color="primary"
           >

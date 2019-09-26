@@ -19,7 +19,7 @@ import { ENVIRONMENT } from "../../../../environments/environment";
 @Injectable()
 export class PodsService {
   // variable for all pods
-  allPods;
+  allPods: IPod[];
   // variable for single pod
   singlePod: IPod;
 
@@ -29,7 +29,7 @@ export class PodsService {
    * Gets all the pods
    */
   GetAllPods = (): void => {
-    this.http.get(`${ENVIRONMENT.apiUrl}/api/all-pods`).subscribe(data => {
+    this.http.get<IPod[]>(`${ENVIRONMENT.apiUrl}/api/all-pods`).subscribe(data => {
       this.allPods = data;
       console.log(data);
     });

@@ -14,7 +14,7 @@ import { IPod } from "../../../core/interfaces/pods/pod.model";
 })
 export class PodModalComponent implements OnInit {
   constructor(
-    private podsService: PodsService,
+    public podsService: PodsService,
     private modalRef: ModalService
   ) {} // end of constructor
 
@@ -24,16 +24,6 @@ export class PodModalComponent implements OnInit {
    *
    */
   onHandleClosePod = (): void => {
-    /*alert("ARE YOU HAPPY DUSTIN???");
-    alert("THE X IS THERE DUSTIN!!");
-    alert("DID YOU SEE THE X DUSTIN??");
-    alert("It changes to red on hover!!");
-    alert(`“At the center of your being
-    you have the answer;
-    you know who you are
-    and you know what you want.”
-    ― Lao Tzu`);
-    alert("WHICH IS THIS X DUSTIN!");*/
     this.modalRef.dialog.close();
   }; // end of onHandleClosePod
 
