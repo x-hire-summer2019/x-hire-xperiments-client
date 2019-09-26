@@ -3,59 +3,42 @@
     Welcome to your Digital POD's' home page.
   </h2>
   <h4 class="title2 title--center title--m-s-40">
-   Below you will find the various available digital POD's open to you that you can sign up for.
+    Below you will find the various available digital POD's open to you that you
+    can sign up for.
   </h4>
   <div class="holder holder--m-t-20 holder--w-full">
     <div class=" holder holder--dis-col holder--m-center button--col-m">
       <h2 class="title--center title--small-caps title--medium">technology</h2>
       <mat-divider></mat-divider>
-      <button mat-raised-button (click)="onHandleOpenModal()" color="primary">
-        AI/ML & Data Science
-      </button>
-      <button mat-raised-button (click)="onHandleOpenModal()" color="primary">
-        Java
-      </button>
-      <button mat-raised-button (click)="onHandleOpenModal()" color="primary">
-        Blockchain
-      </button>
-      <button mat-raised-button (click)="onHandleOpenModal()" color="primary">
-        Microsoft
-      </button>
-      <button mat-raised-button (click)="onHandleOpenModal()" color="primary">
-        Mobility
-      </button>
-      <button mat-raised-button (click)="onHandleOpenModal()" color="primary">
-        JS Frameworks
-      </button>
-      <button mat-raised-button (click)="onHandleOpenModal()" color="primary">
-        DevOps(QA + Tech)
-      </button>
+      <ng-container *ngFor="let pod of podsService.allPods">
+        <ng-container *ngIf="pod.podType === 'technology'">
+          <button
+            mat-raised-button
+            (click)="onHandleOpenModal()"
+            color="primary"
+          >
+            {{ pod.podName }}
+          </button>
+        </ng-container>
+      </ng-container>
     </div>
 
     <div class=" holder holder--dis-col holder--m-center  button--col-m">
-      <h3 class="title--center  title--small-caps title--medium">business assurance</h3>
+      <h3 class="title--center  title--small-caps title--medium">
+        business assurance
+      </h3>
       <mat-divider></mat-divider>
-      <button (click)="onHandleOpenModal()" mat-raised-button color="primary">
-        Assurance Excellence & Test Advisory
-      </button>
-      <button mat-raised-button (click)="onHandleOpenModal()" color="primary">
-        Innovation POD, DevOps, and Cloud
-      </button>
-      <button mat-raised-button (click)="onHandleOpenModal()" color="primary">
-        Frameworks and Tools Standardization
-      </button>
-      <button mat-raised-button (click)="onHandleOpenModal()" color="primary">
-        Performance Testing
-      </button>
-      <button mat-raised-button (click)="onHandleOpenModal()" color="primary">
-        Scriptless Automation
-      </button>
-      <button mat-raised-button (click)="onHandleOpenModal()" color="primary">
-        Mobile Automation
-      </button>
-      <button mat-raised-button (click)="onHandleOpenModal()" color="primary">
-        RPA and Low Code
-      </button>
+      <ng-container *ngFor="let pod of podsService.allPods">
+        <ng-container *ngIf="pod.podType === 'businessAssurance'">
+          <button
+            (click)="onHandleOpenModal()"
+            mat-raised-button
+            color="primary"
+          >
+            {{ pod.podName }}
+          </button>
+        </ng-container>
+      </ng-container>
     </div>
   </div>
 </div>

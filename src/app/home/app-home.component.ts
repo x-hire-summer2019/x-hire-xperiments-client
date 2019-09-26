@@ -24,7 +24,7 @@ import { IPod } from "../core/interfaces/pods/pod.model";
 })
 export class HomeComponent implements OnInit {
   constructor(
-    private podsService: PodsService,
+    public podsService: PodsService,
     public dialog: MatDialog,
     private modalSize: ModalSizeService,
     private modalRef: ModalService,
