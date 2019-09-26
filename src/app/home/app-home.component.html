@@ -11,15 +11,15 @@
       <h2 class="title--center title--small-caps title--medium">technology</h2>
       <mat-divider></mat-divider>
       <ng-container *ngFor="let pod of podsService.allPods">
-        <ng-container *ngIf="pod.podType === 'technology'">
+        <!-- <ng-container *ngIf="pod.podType === 'technology'"> -->
           <button
             mat-raised-button
-            (click)="onHandleOpenModal()"
+            (click)="onHandleOpenModal(pod)"
             color="primary"
           >
             {{ pod.podName }}
           </button>
-        </ng-container>
+        <!-- </ng-container> -->
       </ng-container>
     </div>
 
