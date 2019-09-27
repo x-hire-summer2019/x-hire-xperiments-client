@@ -61,9 +61,9 @@
       <div class="holder holder--dis-col holder--m-t-50">
         <h4 class="title2">PODs Joined</h4>
         <mat-list>
-          <mat-list-item [routerLink]="['/single-pod/1']" class="clickable"
-            >Single POD</mat-list-item
-          >
+          <mat-list-item [routerLink]="['/single-pod']" class="clickable">{{
+            podsService.singlePod.podName
+          }}</mat-list-item>
         </mat-list>
       </div>
       <mat-divider></mat-divider>
